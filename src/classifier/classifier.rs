@@ -61,6 +61,7 @@ fn classify_separator(c: char) -> Option<SeparatorKind> {
         '-' | '_' | '\'' | ':' | '/' | '\\' | '@' | '"' | '+' | '~' | '=' | '^' | '*' | '#' => {
             Some(SeparatorKind::Soft)
         }
+        // ??? TODO how to extract this so it can be dynamically configured? (it optionally include period, etc)
         '.' | ';' | ',' | '!' | '?' | '(' | ')' | '[' | ']' | '{' | '}' | '|' => {
             Some(SeparatorKind::Hard)
         }
